@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laptop Store</title>
+    <link rel="stylesheet" href="./main/main.css">
+    <link rel="stylesheet" href="/src/modal/modal.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>Welcome to Laptop Store</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#order-form">Order</a></li>
+                    <li><a href="#contacts">Contacts</a></li>
+                </ul>
+            </nav>
+            <div class="auth-section">
+                <p>Your Account</p>
+                <button id="login">Login</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Slider Section -->
+        <section class="slider">
+            <button id="prev">&#10094;</button>
+            <div class="slides">
+                <div class="slide">
+                    <img src="images/s01.jpg" alt="Laptop 1">
+                    <p>High-performance laptop for work and play</p>
+                </div>
+                <div class="slide">
+                    <img src="images/s02.jpg" alt="Laptop 2">
+                    <p>Lightweight and portable laptop for daily use</p>
+                </div>
+                <div class="slide">
+                    <img src="images/s03.png" alt="Laptop 3">
+                    <p>Gaming laptop with powerful specs</p>
+                </div>
+            </div>
+            <button id="next">&#10095;</button>
+        </section>
+
+        <!-- Product Cards Section -->
+        <section id="products" class="product-cards">
+            <h2>Our Laptops</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="images/01.jpg" alt="Laptop 1">
+                    <h3>Laptop 1</h3>
+                    <p>Price: $1000</p>
+                    <button class="add-to-cart" data-product="Laptop 1">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="images/02.jpg" alt="Laptop 2">
+                    <h3>Laptop 2</h3>
+                    <p>Price: $1200</p>
+                    <button class="add-to-cart" data-product="Laptop 2">Add to Cart</button>
+                </div>
+                <div class="card">
+                    <img src="images/03.jpg" alt="Laptop 3">
+                    <h3>Laptop 3</h3>
+                    <p>Price: $1500</p>
+                    <button class="add-to-cart" data-product="Laptop 3">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Order Form Section -->
+        <section id="order-form" class="order-form">
+            <h2>Place Your Order</h2>
+            <form id="orderForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="comment">Comment:</label>
+                    <textarea id="comment" name="comment" rows="4" placeholder="Additional details"></textarea>
+                </div>
+
+                <ul id="order-details" class="order-summary">
+                    <!-- Added items will appear here -->
+                </ul>
+
+                <button type="submit" class="submit-button">Submit Order</button>
+            </form>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacts" class="contacts">
+            <h2>Contact Us</h2>
+            <p>Email: support@laptopstore.com</p>
+            <p>Phone: +1-800-555-1234</p>
+            <p>Address: 123 Laptop Ave, Tech City, USA</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Laptop Store. All rights reserved.</p>
+    </footer>
+
+    <!-- Modal Structure -->
+    <div id="loginModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" id="closeModal">&times;</span>
+            <h2>Login to Your Account</h2>
+            <label for="modal-username">Username:</label>
+            <input type="text" id="modal-username" placeholder="Enter your username">
+            <label for="modal-password">Password:</label>
+            <input type="password" id="modal-password" placeholder="Enter your password">
+            <button id="submitModal">Login</button>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="/src/main/main.js"></script>
+    <script src="/src/modal/modal.js"></script>
+</body>
+</html>

@@ -1,0 +1,299 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #e0e4e5, #f9f9f9);
+    color: #333;
+}
+
+/* Header Styles */
+header {
+    background: linear-gradient(135deg, #2c3e50, #34495e);
+    color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #00bcd4;
+}
+
+.auth-section {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    justify-content: flex-end;
+}
+
+.auth-section p {
+    margin: 0;
+    font-size: 14px;
+    color: #f1f1f1;
+}
+
+.auth-section button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.auth-section button:hover {
+    background-color: #0056b3;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Slider Section */
+.slider {
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    height: auto;
+    max-height: 830px;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.slider .slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slider .slide {
+    flex: 0 0 100%;
+    height: 500px;
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden;
+}
+
+.slider .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.slider button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    font-size: 18px;
+    z-index: 10;
+}
+
+.slider #prev {
+    left: 10px;
+}
+
+.slider #next {
+    right: 10px;
+}
+
+/* Product Cards Section */
+.product-cards {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.product-cards h2 {
+    text-align: center;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.product-cards .cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.product-cards .card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    width: 280px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-cards .card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.product-cards .card h3 {
+    font-size: 18px;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.product-cards .card p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+.product-cards .card button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.product-cards .card button:hover {
+    background-color: #0056b3;
+}
+
+/* Place Your Order */
+.order-form {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 30px;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.order-form h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+}
+
+.order-form .form-group {
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.order-form label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.order-form input, .order-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.order-form button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.order-form button:hover {
+    background-color: #0056b3;
+}
+
+/* Contact Section */
+.contacts {
+    background-color: #fff;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.contacts h2 {
+    margin-bottom: 15px;
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #00bcd4;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.contacts p {
+    margin: 10px 0;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #2c3e50;
+    color: white;
+    font-size: 14px;
+}
